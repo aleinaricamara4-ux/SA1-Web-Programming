@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J's Gallery</title>
+
+    <style>
+        /* Started off by giving the website color and fonts. */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgrey;
+        }
+
+        /* This is the title / header 1 */
+        h1 {
+            color: black;
+            padding: 10px;
+            margin-top: 10px;
+            text-align: center;
+            font-size: 60px;
+            margin-bottom: 0px;
+        }
+
+        /* for the navigation bar, i made it centered like the reference and tried to made it exactly like it. */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 2px;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            margin-bottom: 15px;
+        }
+
+        /* i made the color blue and gave it underlines */
+        nav ul a {
+            padding: 30px;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        /* for the text in the website */
+        p {
+            padding: 10px;
+            margin: 0px;
+            font-size: 16px;
+
+        }
+
+        /* i noticed that the reference picture had shadows in the side of the image so i added some aswell */
+        .cow-img {
+            float: right;
+            box-shadow: 3px 0 6px rgba(0, 0, 0, 0.15),
+                -3px 0 6px rgba(0, 0, 0, 0.15);
+            width: 290px;
+            height: 300px;
+            margin: 10px 20px 10px 20px;
+        }
+
+        video {
+            display: block;
+            margin: 0;
+        }
+
+        /* making some space for the media */
+        .layout {
+            margin-top: 10px;
+        }
+
+        /* grouped the media so it would be easier to code */
+        .media {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        /* alternated the columns/rows like i saw in the reference picture. */
+        .firstrow {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 0;
+        }
+
+        .secondrow {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 0;
+        }
+
+        .thirdrow {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 0;
+        }
+
+        /* for responsiveness and readability */
+        @media (max-width: 600px) {
+            .cow-img {
+                float: none;
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+
+            .firstrow,
+            .secondrow,
+            .thirdrow {
+                grid-template-columns: 1fr;
+            }
+
+            .media {
+                height: auto;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div> <!-- used div to group it -->
+        <h1>J's Gallery</h1>
+
+        <nav> <!-- created the nav bar and used ul and li -->
+            <ul>
+                <li><a href="pagelayout.html">Home</a></li>
+                <li><a href="pagelayout.html">About</a></li>
+                <li><a href="pagelayout.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <div> <!-- using div again for the first half of the website. -->
+            <img class="cow-img" src="COW.jpg" alt="cow"> <!-- I gave the image a class -->
+
+
+            <p>
+                Lorem ipsum odor amet, consectetuer adipiscing elit. Praesent mollis adipiscing per id libero libero.
+                Tempus
+                pretium netus molestie scelerisque facilisis tristique volutpat ultricies. Nostra ligula ac pulvinar
+                rutrum
+                non
+                rhoncus mauris facilisi. Quisque maximus commodo sollicitudin, montes congue imperdiet. Est malesuada
+                vivamus
+                vestibulum ante aenean class. Per integer aptent ullamcorper sagittis posuere dignissim morbi
+                scelerisque.
+                Fringilla primis sagittis lorem erat integer; vulputate nullam. Porta purus habitant id fermentum nec
+                ex,
+                proin
+                mauris sem.
+            </p>
+
+            <p>
+                Lectus ultrices nibh lobortis tempus facilisis sit conubia taciti. Non torquent amet nibh elit ante
+                fermentum
+                praesent cras. Et suspendisse egestas eros erat aptent sollicitudin. Nulla tortor purus posuere auctor
+                himenaeos
+                malesuada. Turpis phasellus enim venenatis aliquam pellentesque senectus, id ultrices. Praesent tellus
+                consequat
+                phasellus cubilia mattis mauris natoque litora. Fringilla cursus montes inceptos nec venenatis platea.
+            </p>
+        </div>
+
+        <!-- I made different classes for the different rows and one class for the entirety, making it easier
+            to code and understand how to connect them. -->
+        <div class="layout">
+            <div class="firstrow">
+                <video controls class="media video1">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <img class="media img1" src="img4598.jpg" alt="lights">
+            </div>
+            <div class="secondrow">
+                <img class="media img2" src="img4532.jpg" alt="camera">
+                <img class="media img3" src="photo_2018_02_01.jpg" alt="tree">
+            </div>
+            <div class="thirdrow">
+                <img class="media img4" src="photo_2018_02_31.jpg" alt="mountains">
+                <img class="media img5" src="johns car jpg.jpg" alt="john's car">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

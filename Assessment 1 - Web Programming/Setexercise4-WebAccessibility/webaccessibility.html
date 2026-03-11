@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Accessibility</title>
+
+    <style>
+        /* giving the background some color */
+        body {
+            background-color: #F8F3E1;
+        }
+
+        /* giving the title color and the impact font because its easy to read and see */
+        h1 {
+            color: #41431B;
+            font-size: 40px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin-bottom: 20px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        /* frm previous lectures, i remembered how to use hover and how to fix the navigation bar depending
+            on the vibe. */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #AEB784;
+            font-size: 17px;
+        }
+
+        /* making the nav bar go to the left */
+        nav ul li {
+            float: left;
+        }
+
+        nav ul a {
+            display: block;
+            color: #41431B;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* allowing it to hover and focus for wide accessibility */
+        nav ul li a:hover,
+        nav ul li a:focus {
+            background-color: #a5a963;
+        }
+
+        /* floating the cart symbol right because it looks nice and its easy to spot. */
+        .cart-item {
+            float: right;
+        }
+
+        .cart-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #41431B;
+            font-weight: bold;
+        }
+
+        /* for the text in the website */
+        p {
+            font-family: sans-serif;
+        }
+
+        /* giving the buttons color and the hover and focus aswell */
+        button {
+            background-color: #41431B;
+            color: #F8F3E1;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: #AEB784;
+            color: #41431B;
+        }
+
+        /* turning the images into a 4x4 */
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* giving the photos a background for the aesthetic and clean look */
+        .photos {
+            background-color: #E3DBBB;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .photos img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <!-- I used header instead of div this time -->
+    <header>
+        <h1>The Travels of the Wondering Photographer</h1>
+        <!-- I created the navigation bar using ul and li again, however, i also added an image of the
+         shopping cart and turned it into a clickable icon, with text alongside it. -->
+        <nav>
+            <ul>
+                <li><a href="webaccessibility.html">Home</a></li>
+                <li><a href="webaccessibility.html">Blog</a></li>
+                <li><a href="webaccessibility.html">About me</a></li>
+                <li class="cart-item">
+                    <a href="checkout.html" class="cart-link">
+                        <img src="shopping.svg" alt="" width="24" height="24">
+                        View Shopping Cart
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!-- created the "main" for the body. -->
+
+        <!-- I used article and used it for each photo for symmetry and aesthetic. I have also inserted the button
+         here for users and customers to purchase the photos easily.
+          -->
+        <article class="photos">
+            <img src="OceanPhoto.jpg" alt="ocean of greenland">
+            <p>This was from a fabulous trip to the coast of Greenland with my family. The water was lovely- but very
+                cold! </p>
+            <button type="button">Add to basket</button>
+        </article>
+
+        <article class="photos">
+            <img src="BridgePhoto.jpg" alt="Golden Gate Bridge">
+            <p>A picture of the Golden Gate Bridge located in San Francisco, taken under the beautiful blue sky.</p>
+            <button type="button">Add to basket</button>
+        </article>
+
+        <article class="photos">
+            <img src="ValleyPhoto.jpg" alt="valley from greenland">
+            <p>Another great photo from Greenland. It's a river valley where a glacier used to be.</p>
+            <button type="button">Add to basket</button>
+        </article>
+
+        <article class="photos">
+            <img src="WaterfallPhoto.jpg" alt="waterfall">
+            <p>The waterfall made such a lovely sound. I could have fallen asleep!</p>
+            <button type="button">Add to basket</button>
+        </article>
+
+    </main>
+
+    <footer>
+        <!-- I added a horizontal line and the copyright. -->
+        <hr>
+        Copyright © 2018 The Wondering Photographer.
+    </footer>
+</body>
+
+</html>

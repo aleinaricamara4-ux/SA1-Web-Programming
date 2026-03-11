@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking with Andy</title>
+
+    <style>
+        /* Giving the website color */
+        body {
+            background-color: #f6f6f6;
+
+
+        }
+
+        /* background color for the header */
+        #background {
+            background-color: lightgrey;
+            color: black;
+            padding: 15px;
+            margin: 10px;
+            padding-top: 2px;
+        }
+
+        /* coding for the navigation bar */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 2px;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul a {
+            padding: 3px;
+        }
+
+        /* I added a left margin so that there is space and all of the text aligns */
+        h2,
+        p,
+        ul,
+        ol {
+            margin-left: 10px;
+        }
+
+        /* Made the "notes" class for the note and the copyright */
+        .notes {
+            background-color: lightgrey;
+            padding: 35px;
+            margin: 10px;
+            padding-left: 20px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- using div to make a class for the header -->
+    <div id="background">
+        <h1> Cooking with Andy! </h1>
+
+        <nav>
+            <ul>
+                <li><a href="semanticmarkup.html">Home</a></li>
+                <li><a href="semanticmarkup.html">Blog</a></li>
+                <li><a href="semanticmarkup.html">Browse</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- h2 for the important headings -->
+    <h2>Chocolate Chip Cookies</h2>
+
+    <p>Delicious homemade cookies with gooey chocolate chips!</p>
+
+    <h2>Ingredients</h2>
+    <!-- i used ul here since its supposed to be in bullet points -->
+    <ul>
+        <li>2 1/4 cups flour</li>
+        <li>1/2 teaspoon baking soda</li>
+        <li>1 cup unsalted butter, softened</li>
+        <li>1/2 cup granulated sugar</li>
+        <li>1 cup packed brown sugar</li>
+        <li>1 teaspoon vanilla extract</li>
+        <li>2 large eggs</li>
+        <li>2 cups semisweet chocolate chips</li>
+    </ul>
+
+    <!-- made a class for the note and the copyright message in the footer -->
+    <p class="notes">
+        If you don't have eggs, you can use a suitable egg substitute like applesauce, mashed bananas, or yogurt. Use
+        1/4 cup of the substitute for each egg in the recipe.
+    </p>
+
+    <h2>Instructions</h2>
+    <!-- using the ol tag because its a numbered list. -->
+    <ol>
+        <li>Preheat your oven to 190°C.</li>
+        <li>In a small bowl, mix the flour and baking soda. Set aside.</li>
+        <li>In a large mixing bowl, cream together the softened butter, granulated sugar, brown sugar, and vanilla
+            extract until smooth.</li>
+        <li>Add the eggs one at a time, beating well after each addition.</li>
+        <li>Gradually add the flour mixture to the wet ingredients, mixing until well combined.</li>
+        <li>Stir in the chocolate chips.</li>
+        <li>Drop rounded tablespoons of dough onto ungreased baking sheets.</li>
+        <li>Bake in the oven for 8-10 minutes or until the edges are golden brown.</li>
+        <li>Allow the cookies to cool on the baking sheets for a few minutes before transferring them to wire racks to
+            cool completely.</li>
+    </ol>
+
+<footer>
+    <!-- putting the copyright in the footer. -->
+    <p class="notes">Cooking With Andy © 2024</p>
+</footer>
+</body>
+</html>
